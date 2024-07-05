@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Solicitação de Melhoria de Sistema</title>
+    <style>
+        /* Estilos opcionais para melhorar a apresentação */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulário de Solicitação de Melhoria de Sistema</h2>
+    <form action="https://formspree.io/f/mwpekwwj" method="POST">
+        
+        <!-- Informações do Solicitante -->
+        <fieldset>
+            <legend>1. Informações do Solicitante:</legend>
+            <label for="nome_completo">Nome Completo:</label>
+            <input type="text" id="nome_completo" name="nome_completo" required>
+
+            <label for="departamento">Departamento:</label>
+            <input type="text" id="departamento" name="departamento" required>
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+        </fieldset>
+
+        <!-- Descrição da Melhoria Solicitada -->
+        <fieldset>
+            <legend>2. Descrição da Melhoria Solicitada:</legend>
+            <label for="titulo_solicitacao">Título da Solicitação:</label>
+            <input type="text" id="titulo_solicitacao" name="titulo_solicitacao" required>
+
+            <label for="descricao_melhoria">Descrição Detalhada da Melhoria:</label>
+            <textarea id="descricao_melhoria" name="descricao_melhoria" required></textarea>
+
+            <label for="objetivo_melhoria">Objetivo da Melhoria:</label>
+            <textarea id="objetivo_melhoria" name="objetivo_melhoria" required></textarea>
+        </fieldset>
+
+        <!-- Impacto e Justificativa -->
+        <fieldset>
+            <legend>3. Impacto e Justificativa:</legend>
+            <label for="problema_atual">Problema Atual:</label>
+            <textarea id="problema_atual" name="problema_atual" required></textarea>
+
+            <label for="impacto_atual">Impacto Atual:</label>
+            <textarea id="impacto_atual" name="impacto_atual" required></textarea>
+
+            <label for="beneficios_esperados">Benefícios Esperados:</label>
+            <textarea id="beneficios_esperados" name="beneficios_esperados" required></textarea>
+        </fieldset>
+
+        <!-- Requisitos Específicos -->
+        <fieldset>
+            <legend>4. Requisitos Específicos:</legend>
+            <label for="funcionalidades_requeridas">Funcionalidades Requeridas:</label>
+            <textarea id="funcionalidades_requeridas" name="funcionalidades_requeridas" required></textarea>
+
+            <label for="criterios_sucesso">Critérios de Sucesso:</label>
+            <textarea id="criterios_sucesso" name="criterios_sucesso" required></textarea>
+        </fieldset>
+
+        <!-- Urgência e Prioridade -->
+        <fieldset>
+            <legend>5. Urgência e Prioridade:</legend>
+            <label for="grau_urgencia">Grau de Urgência:</label>
+            <select id="grau_urgencia" name="grau_urgencia" required>
+                <option value="alta">Alta</option>
+                <option value="media">Média</option>
+                <option value="baixa">Baixa</option>
+            </select>
+
+            <label for="justificativa_urgencia">Justificativa da Urgência:</label>
+            <textarea id="justificativa_urgencia" name="justificativa_urgencia" required></textarea>
+        </fieldset>
+
+        <!-- Anexos e Documentos Suplementares -->
+        <fieldset>
+            <legend>6. Anexos e Documentos Suplementares:</legend>
+            <label for="anexar_documentos">Anexar Documentos:</label>
+            <input type="file" id="anexar_documentos" name="anexar_documentos">
+        </fieldset>
+
+        <!-- Aprovações Necessárias -->
+        <fieldset>
+            <legend>7. Aprovações Necessárias:</legend>
+            <label for="gerente_responsavel">Gerente Responsável:</label>
+            <input type="text" id="gerente_responsavel" name="gerente_responsavel">
+
+            <label for="aprovacao_gerente">Aprovação do Gerente:</label>
+            <select id="aprovacao_gerente" name="aprovacao_gerente">
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+
+            <label for="comentario_gerente">Comentário do Gerente:</label>
+            <textarea id="comentario_gerente" name="comentario_gerente"></textarea>
+        </fieldset>
+
+        <!-- Comentários Adicionais -->
+        <fieldset>
+            <legend>8. Comentários Adicionais:</legend>
+            <label for="comentarios_adicionais">Comentários:</label>
+            <textarea id="comentarios_adicionais" name="comentarios_adicionais"></textarea>
+        </fieldset>
+
+        <!-- Assinatura do Solicitante -->
+        <fieldset>
+            <legend>Assinatura do Solicitante:</legend>
+            <label for="assinatura_solicitante">Assinatura:</label>
+            <input type="text" id="assinatura_solicitante" name="assinatura_solicitante" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
+        </fieldset>
+
+        <!-- Botão de Envio -->
+        <button type="submit">Enviar Solicitação</button>
+    </form>
+</body>
+</html>
